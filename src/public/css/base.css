@@ -1,0 +1,191 @@
+@charset "UTF-8";
+
+/*---------------------------------------------
+
+Base CSS
+
+for YAMADA
+coded by d-spica at 2020-02-27
+imported to "page-type.css"
+
+---------------------------------------------*/
+
+
+html {
+	background: #F0F2F4;
+	line-height: 1.25;
+	font-family: sans-serif;
+	font-size: 5.3333vw;
+	color: #333;
+}
+
+body {
+	position: relative;
+	-webkit-text-size-adjust: 100%;
+}
+
+a {
+	color: inherit;
+}
+
+img {
+	width: 100%;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	z-index: 5;
+	box-shadow: 0 0 0.3rem rgba(0,0,0,0.3);
+	background: #FFF;
+	padding: 0.5rem 1rem 0.4rem;
+}
+
+.home header {
+	padding: 0.3rem 1rem;
+}
+header a {
+	display: block;
+	width: 1.6rem;
+	height: 1.6rem;
+}
+
+header .back a {
+	background: url("https://cdn.mymd.jp/sp/static/img/common/ar-l.svg") no-repeat 50% 50% / 1.2rem auto;
+}
+
+header .menu a {
+	background: url("https://cdn.mymd.jp/sp/static/img/common/bt-menu.svg") no-repeat 50% 50% / 1.2rem auto;
+}
+
+header h1 a {
+	background: url("https://cdn.mymd.jp/sp/static/img/common/lg-yamada.svg") no-repeat 50% 30% / 6.35rem auto;
+	width: 8.5rem;
+}
+
+header .reload a {
+	background: url("https://cdn.mymd.jp/sp/static/img/common/bt-reload.svg") no-repeat 50% 50% / 0.8rem auto;
+}
+
+header .member a {
+	background: url("https://cdn.mymd.jp/sp/static/img/common/bt-member.svg") no-repeat 50% 50% / 1.6rem auto;
+}
+
+.home header .empty {
+	width: 1.8rem;
+	height: 1.6rem;
+}
+
+.home header .qr a {
+	background: url("https://cdn.mymd.jp/sp/static/img/common/bt-qr.svg") no-repeat 50% 50% / 1.8rem auto;
+	width: 1.8rem;
+	height: 2.3rem;
+}
+
+.home header .member a {
+	background: url("https://cdn.mymd.jp/sp/static/img/common/bt-member-ct.svg") no-repeat 50% 50% / 1.5rem auto;
+	height: 2.3rem;
+}
+
+div.nav-layer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	width: 13.5rem;
+	display: none;
+}
+
+nav ul {
+	padding: 0.3em 0;
+	font-size: 0.7rem;
+	color: #FFF;
+}
+
+nav ul:nth-of-type(1) {
+	background: #004DA0;
+}
+
+nav ul:nth-of-type(2) {
+	background: #41A3E0;
+}
+
+nav ul a {
+	display: block;
+	padding: 1.4em 1em 1.4em 5em;
+}
+
+nav ul .home a {
+	background: url("https://cdn.mymd.jp/sp/static/img/common/ic-home-w.svg") no-repeat 1.25rem 50% / 1.1rem auto;
+}
+
+nav ul .member a {
+	background: url("https://cdn.mymd.jp/sp/static/img/common/ic-member-w.svg") no-repeat 1.25rem 50% / 1.1rem auto;
+}
+
+nav ul .mypage a {
+	background: url("https://cdn.mymd.jp/sp/static/img/common/ic-mypage-w.svg") no-repeat 1.25rem 50% / 1.1rem auto;
+}
+
+nav ul .history a {
+	background: url("https://cdn.mymd.jp/sp/static/img/common/ic-history-w.svg") no-repeat 1.2rem 50% / 1.1rem auto;
+}
+
+nav ul .netshopping a {
+	background: url("https://cdn.mymd.jp/sp/static/img/common/ic-netshopping-w.svg") no-repeat 1.2rem 50% / 1.1rem auto;
+}
+
+nav ul .storesearch a {
+	background: url("https://cdn.mymd.jp/sp/static/img/common/ic-storesearch-w.svg") no-repeat 1.3rem 50% / 1rem auto;
+}
+
+nav ul .coupon a {
+	background: url("https://cdn.mymd.jp/sp/static/img/common/ic-coupon-w.svg") no-repeat 1.3rem 50% / 1rem auto;
+}
+
+nav ul .questionary a {
+	background: url("https://cdn.mymd.jp/sp/static/img/common/ic-questionary-w.svg") no-repeat 1.3rem 50% / 1rem auto;
+}
+
+nav ul .service a {
+	background: url("https://cdn.mymd.jp/sp/static/img/common/ic-service-w.svg") no-repeat 1.35rem 50% / 0.9rem auto;
+}
+
+nav ul .notice a {
+	background: url("https://cdn.mymd.jp/sp/static/img/common/ic-notice-w.svg") no-repeat 1.3rem 50% / 1rem auto;
+}
+
+nav ul .setting a {
+	background: url("https://cdn.mymd.jp/sp/static/img/common/ic-setting-w.svg") no-repeat 1.275rem 50% / 1.05rem auto;
+}
+
+nav ul .help a {
+	background: url("https://cdn.mymd.jp/sp/static/img/common/ic-help-w.svg") no-repeat 1.2rem 50% / 1.2rem auto;
+}
+
+nav ul .unread a {
+	position: relative;
+}
+
+nav ul .unread a::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0.9em;
+	left: 2.8em;
+	box-sizing: border-box;
+	border: solid 0.1rem #41A3E0;
+	border-radius: 0.3rem;
+	background: #D71318;
+	width: 0.6rem;
+	height: 0.6rem;
+}
+
+footer {
+	padding: 1.6rem 0.8rem;
+	text-align: center;
+	font-size: 0.6rem;
+	color: #7B7C7D;
+}

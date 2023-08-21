@@ -1,0 +1,2099 @@
+@charset "UTF-8";
+
+/*---------------------------------------------
+
+Each Page CSS
+
+for YAMADA
+coded by d-spica at 2021-03-05
+
+---------------------------------------------*/
+
+
+@import url("default.css");
+@import url("base.css");
+
+
+section h2 {
+	padding: 1.4rem 0.9rem;
+	font-size: 1.2rem;
+}
+
+section .nav-link {
+	text-align: center;
+	color: #1E90FF;
+}
+
+section .nav-link a {
+	display: inline-block;
+	background: url("https://cdn.mymd.jp/sp/static/img/common/ar-r.svg") no-repeat 100% 50% / 0.6rem auto;
+	padding-right: 1.2em;
+}
+
+section .nav-link a[target] {
+	background-image: url("https://cdn.mymd.jp/sp/static/img/common/ar-b.svg");
+}
+
+section .nav-top a {
+	display: block;
+	box-sizing: border-box;
+	border: solid 0.1rem #C6C6CC;
+	border-radius: 0.5em;
+	background: #FFF;
+	padding: 0.7em;
+	text-align: center;
+	font-weight: 700;
+	color: #7B7C7D;
+}
+
+section .note {
+	font-size: 87.5%;
+	color: #7B7C7D;
+}
+
+section .note li,
+section p.note {
+	position: relative;
+	padding-left: 1em;
+}
+
+section .note li::before,
+section p.note::before {
+	content: '※' !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+section [type="checkbox"] {
+	width: 1.2em;
+	height: 1.2em;
+}
+
+section .checked[type="checkbox"] {
+}
+
+section [type="submit"] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	box-sizing: border-box;
+	border: none;
+	border-radius: 0.5em;
+	background: #1E90FF;
+	padding: 0.8em;
+	width: 100%;
+	text-align: center;
+	font-size: 0.8rem;
+	font-weight: 700;
+	color: #FFF;
+	cursor: pointer;
+}
+
+section.service1 {
+	position: relative;
+	background: linear-gradient(to bottom right, #004DA0, #26A5DF);
+	padding: 0 0.8rem;
+	min-height: max(calc(100vh - 5rem), 31rem); 
+}
+
+section.service1 h2 {
+	padding: .5rem 0 1.2rem 0;
+}
+
+
+section.service1 .guide__list {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 1rem 0 1.2rem 0;
+}
+
+section.service1 .guide__list > * {
+	margin-left: .5rem;
+}
+	
+section.service1 .guide__item {
+	display: inline-block;
+	border-radius: 0.4rem;
+	padding: 0.3em 0.5em 0.3em 2.5em;
+	line-height: 1.1;
+	font-size: 0.6rem;
+	font-weight: 700;
+	color: #D71318;
+}
+
+section.service1 .notification {
+	background: #FFF url("https://cdn.mymd.jp/sp/static/img/common/ic-gude-notification.png") no-repeat 10% 50% / 1.1rem auto;
+}
+
+section.service1 .manual {
+	background: #FFF url("https://cdn.mymd.jp/sp/static/img/common/ic-guide-c.svg") no-repeat 10% 50% / 1.1rem auto;
+}
+
+/* section.service1 .guide {
+	display: inline-block;
+	position: absolute;
+	top: 1.2rem;
+	right: 0.8rem;
+	border-radius: 0.4rem;
+	background: #FFF url("https://cdn.mymd.jp/sp/static/img/common/ic-guide-c.svg") no-repeat 10% 50% / 1.1rem auto;
+	padding: 0.3em 0.5em 0.3em 2.5em;
+	line-height: 1.1;
+	font-size: 0.6rem;
+	font-weight: 700;
+	color: #D71318;
+} */
+	
+section.service1 .pointcard {
+	margin-bottom: 1.2rem;
+}
+
+section.service1 .pointcard a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0.8rem;
+	background-color: #FFF;
+	padding: 1em;
+	text-align: center;
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: #004DA0;
+}
+
+section.service1 .pointcard a img {
+	margin-right: 0.6rem;
+	width: 3rem;
+	vertical-align: middle;
+}
+
+section.service1 .pointcard span {
+	display: inline-block;
+}
+
+section.service1 .pointcard span b {
+	display: block;
+	margin-bottom: 0.5em;
+	border-radius: 0.8em;
+	background: #004DA0; /* 2021.04.07修正 */
+	padding: 0.2em 1em;
+	font-size: 0.6rem;
+	color: #FFF;
+}
+
+section.service1 .point {
+	margin-bottom: 1.2rem;
+	font-size: 0.7rem;
+	color: #FFF;
+}
+
+section.service1 .point span {
+	float: right;
+	margin-top: -0.6em;
+}
+
+section.service1 .point span em {
+	margin-right: 0.1em;
+	font-size: 171%;
+	font-weight: 700;
+}
+
+section.service1 ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	text-align: center;
+	font-size: 0.6rem;
+	font-weight: 700;
+}
+
+section.service1 li {
+	position: relative;
+	margin-bottom: 1em;
+	width: 48%;
+}
+
+section.service1 li a {
+	display: block;
+	border-radius: 0.8rem;
+	background: #FFF;
+	padding: 1.2em 0.8em 1.5em;
+	height: calc(100% - 2.7em);
+	color: #004DA0;
+}
+
+section.service1 li img {
+	display: block;
+	margin: 1em auto 0;
+}
+
+section.service1 li [src*="/ic-yamada_neobank"] { /* 2021.05.20 修正 */
+	width: 6rem;
+}
+
+section.service1 li [src*="/ic-yamadapay-c.svg"] { /* 2021.05.21 追加 */
+	width: 4rem;
+	margin-top: 1rem
+}
+
+section.service1 li [src*="/ic-otoku-c"] {
+	margin-top: 1.5em;
+	width: 3rem;
+}
+
+section.service1 li [src*="/lg-yamada_webcom"] {
+	margin-top: 1.4em;
+	margin-bottom: 0.6em;
+	margin: 2.1em auto 1.8em; /* 2021.05.20 修正 */
+}
+
+section.service1 li [src*="/lg-yamada_mall"] {
+	/* margin-top: 1.2em; */
+	/* margin-bottom: 0.5em; */
+	width: 80%;
+	margin: 2.1em auto 1.8em; /* 2021.05.20 修正 */
+}
+
+section.service1 li b {
+	display: block;
+	position: absolute;
+	top: 0.5em;
+	right: calc(50% - 2rem);
+	width: 2.4em;
+}
+
+section.service1 li i.new { /* 2021.07.08 修正 */
+	display: block;
+	position: absolute;
+	top: -0.8em;
+	left: calc(50% - 2.4em);
+	background: url("https://cdn.mymd.jp/sp/static/img/common/ic-new2.svg") no-repeat 50% 50% / 100% auto;
+	width: 4.8em;
+	height: 1.6em;
+}
+
+section.service1 li i.new2 { /* 2021.07.08 追加 */
+	display: block;
+	position: absolute;
+	top: -0.7em;
+	left: calc(50% - 2.4em);
+	border-radius: 0.75em;
+	background-color: #D42D26;
+	padding: 0.1em 0;
+	width: 4.8em;
+	text-align: center;
+	font-size: 0.7rem;
+	font-weight: 400;
+	color: #FFF;
+}
+
+section.service1 li i.start { /* 2021.07.08 追加 */
+	display: block;
+	position: absolute;
+	top: -0.7em;
+	left: calc(50% - 4em);
+	border-radius: 0.75em;
+	background-color: #D42D26;
+	padding: 0.1em 0;
+	width: 8em;
+	text-align: center;
+	font-size: 0.7rem;
+	font-weight: 400;
+	color: #FFF;
+}
+
+section.service2 {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+section.service2 ul {
+	display: flex;
+	background-color: #EEE;	
+	padding: 0.5rem;
+	height: 4rem;
+	text-align: center;
+	font-size: 0.6rem;
+	font-weight: 700;
+	color: #004DA0;
+}
+
+section.service2 li { /* 2021.07.13 修正 */
+	width: 20%;
+}
+
+section.service2 li a {
+	display: block;
+	position: relative;
+	padding: 0.5em;
+	height: calc(100% - 1em);
+}
+
+section.service2 li img {
+	display: block;
+	margin: 0 auto 0.55em;
+	width: 1.6rem;
+	height: auto;
+}
+
+section.service2 li [src*="/ic-chirashi-c"] {
+	margin-top: 0.3em;
+	margin-bottom: 0.75em;
+	width: 2rem; /* 2021.04.04 修正 */
+}
+
+section.service2 li [src*="/ic-yamadapay-c"] { /* 2021.05.20 修正 */
+	margin-top: 0.4em;
+	margin-bottom: 0.85em;
+	width: 3rem;
+}
+
+section.service2 li [src*="/ic-service-c"] { /* 2021.07.13 追加 */
+	margin-top: 0.2em;
+	margin-bottom: 0.7em;
+	width: 1.4rem;
+}
+
+section.service2 li i { /* 2021.04.07 追加 */
+	display: block;
+	position: absolute;
+	top: -0.6em;
+	left: calc(50% - 1.8em);
+	background: url("https://cdn.mymd.jp/sp/static/img/common/ic-new2.svg") no-repeat 50% 50% / 100% auto;
+	width: 3.6em;
+	height: 1.2em;
+}
+
+section.service2 .badge {
+	position: absolute;
+	top: -2.8rem;
+	right: 0.4rem;
+	width: 11rem;
+}
+
+section.service ul.buttons {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 0.5rem;
+	text-align: center;
+	font-size: 0.6rem;
+	font-weight: 700;
+	color: #004DA0;
+} 
+
+section.service .buttons li {
+	margin-bottom: 1rem;
+	box-sizing: border-box;
+	padding: 0 0.5rem;
+	width: 33.333%;
+}
+
+section.service .buttons li a {
+	display: block;
+	position: relative;
+}
+
+section.service .buttons li i {
+	display: block;
+	margin: 0 auto;
+	box-shadow: 0 0.2em 0.4em rgba(0,0,0,0.2);
+	border-radius: 1.6rem;
+	background: #FFF;
+	padding: 0.8rem;
+	width: 1.6rem;
+	height: 1.6rem;
+}
+
+section.service .buttons li i [src*="ic-best"] {
+	width: 80%;
+}
+
+section.service .buttons li i [src*="ic-questionary"] {
+	padding-top: 10%;
+	width: 80%;
+}
+
+section.service .buttons li i [src*="ic-interior-c"] { /* 2021.07.13 追加 */
+	margin: 0 -10%;
+	padding-top: 10%;
+	max-width: 120%;
+	width: 120%;
+}
+
+section.service .buttons li span {
+	display: block;
+	margin-top: 0.6em;
+}
+
+section.service .buttons li b {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 1em;
+	width: 2.4em;
+}
+
+/* */
+
+section.netshopping.modal {
+	display: block;
+}
+
+/* */
+section.mypage .drawer:last-child {
+	border-bottom: 1px solid #ccc;
+}
+
+section.mypage .drawer {
+	margin-bottom: 0;
+	border-top: 1px solid #ccc;
+}
+
+section.mypage .drawer h3 {
+	position: relative;
+}
+
+section.mypage .drawer h3::after {
+	content: '▼';
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 10px;
+	line-height: 1;
+	vertical-align: middle;
+	transition: transform ease 0.2s;
+}
+
+section.mypage .drawer.open h3::after {
+	transform: rotate(180deg) translateY(50%);
+}
+
+section.mypage .drawer ul {
+	display: none;
+}
+
+section.mypage section {
+	margin-bottom: 1.5em;
+	font-size: 0.8rem;
+}
+
+section.mypage section h3 {
+	padding: 0.8em 1em 0.8em 1.2em;
+	font-size: 0.7rem;
+	color: #7B7C7D;
+}
+
+section.mypage section h3 img {
+	margin-right: 0.5em;
+	width: 0.8rem;
+}
+
+section.mypage section h3 span {
+	float: right;
+	margin-top: -0.25em;
+	font-size: 0.6rem;
+	color: #333;
+}
+
+section.mypage section h3 span em {
+	font-size: 0.8rem;
+	font-weight: 700;
+}
+
+section.mypage section li {
+	margin-bottom: 1px;
+}
+
+section.mypage section li a {
+	display: block;
+	background: #FFF url("https://cdn.mymd.jp/sp/static/img/common/ar-r.svg") no-repeat 97% 50% / 0.6rem auto;
+	padding: 0.8em 2em 0.8em 1em;
+}
+
+section.mypage section li a[target] {
+	background-image: url("https://cdn.mymd.jp/sp/static/img/common/ar-b.svg");
+}
+
+section.mypage section li a.labicard {
+	padding-top: 0.65em;
+	padding-bottom: 0.7em;
+}
+
+section.mypage section li a.labicard img {
+	margin-right: 0.5em;
+	width: 1.5em;
+}
+	
+/* */
+
+section.mail p {
+	margin: 1.6em 1em;
+	font-size: 0.8rem;
+}
+
+section.mail dl {
+	margin-bottom: 1em;
+	font-size: 0.8rem;
+}
+
+section.mail dt {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.8em 1em;
+	font-size: 87.5%;
+	font-weight: 700;
+	color: #7B7C7D;
+}
+
+section.mail label {
+	position: relative;
+	padding-left: 2em;
+}
+
+section.mail dt input {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -0.6em;
+}
+
+section.mail dt em {
+	font-weight: 400;
+	color: #333;
+}
+
+section.mail dt em.delivery {
+	font-weight: 700;
+	color: #1E90FF;
+}
+
+section.mail dd {
+	background: #FFF;
+	padding: 0.8em 1em;
+	line-height: 1.67;
+}
+
+section.mail dd em {
+	color: #FF0007;
+}
+
+section.mail dd p {
+	margin: 0 0 0.5em;
+}
+
+section.mail dd ul {
+	margin-bottom: 0.5em;
+}
+
+section.mail dd li {
+	position: relative;
+	margin-bottom: 0.3em;
+	padding-left: 1em;
+}
+
+section.mail dd li::before {
+	content: '・';
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+	
+/* */
+
+section.mail-comp p {
+	margin: 0 1em 1em;
+	line-height: 1.67;
+	font-size: 0.8rem;
+}
+
+section.mail-comp .nav-top {
+	margin: 1.6em 1em;
+	line-height: 1.25;
+}
+
+/* */
+
+section.pointcard {
+	font-size: 0.7rem;
+}
+
+section.pointcard section.data {
+	background: linear-gradient(to bottom right, #004DA0, #34C8FF);
+	padding: 0.8rem;
+	color: #FFF;
+}
+
+section.pointcard section.data.webcom {
+	background: linear-gradient(to bottom right, #EA9000, #FF4367);
+}
+
+section.pointcard section.data.labiplus {
+	background: linear-gradient(to bottom right, #C28B21, #EBE93E);
+}
+
+section.pointcard section.data.silver {
+	background: linear-gradient(to bottom right, #676767, #D6D6D6);
+}
+
+section.pointcard section.data.gold {
+	background: linear-gradient(to bottom right, #BDB80C, #F1DF5D);
+}
+
+section.pointcard section.data.black {
+	background: linear-gradient(to bottom right, #1D1D1D, #9C9C9C);
+}
+
+section.pointcard section.data h3 {
+	margin-bottom: 0.5em;
+	font-size: 0.8rem;
+}
+
+section.pointcard section.data p.card {
+	margin-bottom: 1em;
+	box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,0.3); 
+	border-radius: 0.6rem; /* 2021-02-18 修正 */
+	background: #FFF;
+	padding: 0.15rem;
+	font-size: 0.8rem;
+}
+
+section.pointcard section.data .barcode {
+	margin-bottom: 0.8rem;
+	box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,0.3); 
+	border-radius: 0.6rem; /* 2021-02-18 修正 */
+	background: #FFF;
+	padding: 0.8rem;
+	color: #333;
+}
+
+section.pointcard section.data .barcode dt {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+section.pointcard section.data .barcode dt span {
+	font-weight: 700;
+	color: #7B7C7D;
+}
+
+section.pointcard section.data .barcode dt span b {
+	display: inline-block;
+	margin-right: 0.4em;
+	border-radius: 0.8em;
+	background: #7B7C7D;
+	width: 1.6em;
+	height: 1.6em;
+	line-height: 1.6em;
+	text-align: center;
+	font-size: 0.55rem;
+	color: #FFF;
+}
+
+section.pointcard section.data.bronze .barcode dt span b {
+	background: #8E2904;
+}
+
+section.pointcard section.data.platinum .barcode dt span b {
+	background: #8A8FA0;
+}
+
+section.pointcard section.data.diamond .barcode dt span b {
+	background: #333;
+}
+
+section.pointcard section.data .barcode dd {
+	text-align: right;
+}
+
+section.pointcard section.data .barcode dd a {
+	display: inline-block;
+	background: url("https://cdn.mymd.jp/sp/static/img/common/bt-reload-b.svg") no-repeat 100% 50% / 1.4em auto;
+	padding-right: 1.6em;
+	color: #1E90FF;
+}
+
+section.pointcard section.data .point dt {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 1em;
+}
+
+section.pointcard section.data .point dt em b {
+	display: block;
+	margin-top: 0.5em;
+	background: url("https://cdn.mymd.jp/sp/static/img/common/ar-d-c.svg") no-repeat 0 50% / 1.2em auto;
+	padding-left: 1.6em;
+	font-size: 0.6rem;
+	font-weight: 700;
+}
+
+section.pointcard section.data .point dt em b.open {
+	background-image: url("https://cdn.mymd.jp/sp/static/img/common/ar-u-c.svg");
+}
+
+section.pointcard section.data .point dt span {
+	font-weight: 700;
+}
+
+section.pointcard section.data .point dt span b {
+	margin-right: 0.1em;
+	font-size: 200%;
+}
+
+section.pointcard section.data .point dd ul {
+	border-top: solid 1px #FFF;
+	background: url("https://cdn.mymd.jp/sp/static/img/common/ar-d-3.svg") no-repeat 50% -1px / 0.6rem auto;
+}
+
+section.pointcard section.data .point dd li {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: 1em;
+	padding: 1em 0 0.6em;
+}
+
+section.pointcard section.data .point dd li:nth-child(n+2) {
+	border-top: solid 1px #FFF;
+}
+
+section.pointcard section.data .point dd li span {
+	font-weight: 700;
+}
+
+section.pointcard section.data .point dd li span b {
+	margin-right: 0.1em;
+	font-size: 170%;
+}
+
+section.pointcard section.data .point dd li i {
+	margin-top: 0.6em;
+	width: 100%;
+	text-align: right;
+	font-size: 0.6rem;
+}
+
+section.pointcard section.data .point dd p {
+	border-top: solid 1px #FFF;
+	padding: 1em 0;
+}
+
+section.pointcard section.data .point dd p a {
+	float: right;
+	background: url("https://cdn.mymd.jp/sp/static/img/common/ar-r-w.svg") no-repeat 100% 50% / 0.9em auto;
+	padding-right: 1.2em;
+}
+
+section.pointcard section.data .warranty {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-top: solid 1px #FFF;
+	padding: 1em 0 0.5em;
+}
+
+section.pointcard section.data .warranty em::before {
+	content: '';
+	display: inline-block;
+	margin-right: 0.3em;
+	background: url("https://cdn.mymd.jp/sp/static/img/common/ic-warranty.svg") no-repeat 50% 50% / 100% auto;
+	width: 1.5em;
+	height: 1.5em;
+	vertical-align: middle;
+	filter: brightness(1000%);
+}
+
+section.pointcard section.data .warranty a,
+section.pointcard section.data .warranty span {
+	display: block;
+	background: #FFF;
+	text-align: center;
+}
+
+section.pointcard section.data .warranty span {
+	border-radius: 1em;
+	padding: 0.3em 0.5em;
+	width: 5em;
+	color: #004DA0
+}
+	
+section.pointcard section.data .warranty a {
+	position: relative;
+	margin-right: 1em;
+	border-radius: 1.5em;
+	padding: 0.5em 0.7em;
+	width: auto;
+	font-size: 0.6rem;
+	color:#D71318;
+}
+
+section.pointcard section.data .warranty a::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0.3em;
+	right: -1em;
+	background: url("https://cdn.mymd.jp/sp/static/img/common/ar-r-w.svg") no-repeat 100% 50% / 0.9em auto;
+	width: 0.9em;
+	height: 1.2em;
+	font-size: 0.7rem;
+}
+
+section.pointcard section.data div ul {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 1.2rem 0 0.4rem;
+	font-size: 0.6rem;
+	font-weight: 700;
+	color: #004DA0;
+}
+
+section.pointcard section.data div li { /* 2021.04.14 修正 */
+	box-sizing: border-box;
+	padding: 0 0.5em 0.8em;
+	width: 50%;
+}
+
+section.pointcard section.data li a { /* 2021.04.14 修正 */
+	display: block;
+	border-radius: 0.6rem;
+	background-color: #FFF;
+	padding: 1em 0.4em 0.8em;
+	text-align: center;
+}
+
+section.pointcard section.data li img { /* 2021.04.14 修正 */
+	display: block;
+	margin: 0 auto 0.8em;
+	width: 6em;
+}
+
+section.pointcard section.banners {
+	padding: 0.8rem;
+}
+
+section.pointcard section.banners ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+section.pointcard section.banners li {
+	margin-bottom: 1em;
+	width: 48%;
+}
+
+section.pointcard section.banners li a {
+	display: block;
+	border: solid 1px #CCC;
+	background: #FFF;
+}
+
+section.pointcard section.banners li a span {
+	display: block;
+	padding: 0.3em 0.5em;
+	line-height: 1.5;
+}
+
+section.pointcard section.others h3 {
+	padding: 0.8em 1.2em;
+	color: #7B7C7D;
+}
+
+section.pointcard section.others ul {
+	font-size: 0.8rem;
+}
+
+section.pointcard section.others li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1px;
+	background: #FFF;
+	padding: 0.8em 1em;
+}
+
+section.pointchange {
+	font-size: 0.7rem;
+}
+
+section.pointchange > p {
+	margin: 0 0.8rem 1em;
+	line-height: 1.67;
+}
+
+section.pointchange section {
+	background: #FFF;
+	padding: 0 0.8rem 0.8rem;
+}
+
+section.pointchange section h3 {
+	margin: 0 -0.8rem 0.8rem;
+	background: #123489;
+	padding: 0.5em 0.8rem;
+	font-size: 0.8rem;
+	font-weight: 700;
+	color: #FFF;
+}
+
+section.pointchange section table {
+	width: 100%;
+}
+
+section.pointchange section th {
+	border: solid 1px #DDD;
+	background: #F0F2F4;
+	padding: 0.3em 0.5em;
+	text-align: center;
+	vertical-align: middle;
+	font-weight: 700;
+}
+
+section.pointchange section td {
+	border: solid 1px #DDD;
+	padding: 0.2em;
+	text-align: center;
+	vertical-align: middle;
+}
+
+section.pointchange section td img {
+	width: 7em;
+}
+
+section.pointchange section td a {
+	display: inline-block;
+	border: solid 1px #EC9610;
+	border-radius: 0.2rem;
+	background: linear-gradient(to bottom, #ECB010 0%, #EC9610 100%);
+	padding: 0.4em 1em;
+	text-align: center;
+	color: #FFF;
+}
+
+section.pointchange section dl {
+	margin-bottom: 1rem;
+}
+
+section.pointchange section dt {
+	margin: 0 -0.8rem 0.8rem;
+	border-bottom: solid 0.2rem #123489;
+	padding: 0 0.8rem 0.3em;
+	font-size: 0.8rem;
+	font-weight: 700;
+}
+
+section.pointchange section dt::before {
+	content: '';
+	display: inline-block;
+	margin-right: 0.3em;
+	background: url("https://cdn.mymd.jp/sp/static/img/common/mk-yamada.svg") no-repeat 50% 50% / 100% auto;
+	width: 1.3em;
+	height: 1.3em;
+	vertical-align: -0.3em;
+}
+
+section.pointchange section dd ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+section.pointchange section dd li {
+	margin-bottom: 1em;
+	width: 48%;
+}
+
+/* */
+
+section.coupon section {
+	margin-bottom: 1.5em;
+	font-size: 0.8rem;
+}
+
+section.coupon section h3 {
+	padding: 0.8em 1.2em;
+	font-size: 0.7rem;
+	font-weight: 700;
+	color: #7B7C7D;
+}
+
+section.coupon p,
+section.coupon ul {
+	background: #FFF;
+	padding: 1em;
+}
+
+section.coupon li:nth-child(n+2) {
+	margin-top: 1em;
+}
+
+section.coupon li a {
+	display: block;
+}
+
+/* */
+
+section.coupon2 {
+	overflow: hidden;
+	font-size: 0.7rem;
+}
+
+section.coupon2 ul.nav-section {
+	overflow-x: auto;
+	box-sizing: border-box;
+	padding: 1em;
+	white-space: nowrap;
+	width: 100%;
+	font-weight: 700;
+}
+
+section.coupon2 .nav-section li {
+	display: inline-block;
+}
+
+section.coupon2 .nav-section li a {
+	display: block;
+	padding: 0.3em 1em;
+	border-radius: 1.6em;
+}
+
+section.coupon2 .nav-section li a.current {
+	background: #039;
+	color:  #FFF;
+}
+
+section.coupon2 > div {
+	display: flex;
+	width: 500%;
+}
+
+section.coupon2 section {
+	overflow-y: auto;
+	box-sizing: border-box;
+	padding-top: 0.8rem;
+	height: calc(100vh - 2.7rem); /* グローバルヘッダー挿入時は要調整*/
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+section.coupon2 section ul {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+section.coupon2 section li {
+	margin-bottom: 0.8rem;
+	width: 48%;
+}
+
+section.coupon2 section li a {
+	display: block;
+	box-sizing: border-box;
+	border: solid 1px #CCC;
+	height: 100%;
+}
+
+section.coupon2 section li span {
+	display: block;
+	padding: 0.3em 0.5em;
+	line-height: 1.5;
+}
+
+section.coupon2 section li span i {
+	display: block;
+	margin-top: 0.5em;
+}
+
+section.coupon2 section li span b {
+	float: right;
+	display: inline-block;
+	border: solid 1px;
+	border-radius: 0.8em;
+	padding: 0 1em;
+	font-size: 0.6rem;
+	font-weight: 400;
+	color: #039;
+}
+
+section.coupon2 section p.copyright {
+	padding: 1.6rem 0.8rem;
+    text-align: center;
+    font-size: 0.6rem;
+    color: #7B7C7D;
+}
+
+/* */
+
+section.store {
+	font-size: 0.8rem;	
+}
+
+section.store .search {
+	margin-bottom: 2em;
+	background: #FFF;
+	padding: 0.8em 1em;
+}
+
+section.store .search [type="image"] {
+	margin-right: 0.5em;
+	width: 1.2em;
+}
+
+section.store .search [type="text"] {
+	border: none;
+	outline: none;
+	background: none;
+	width: 19em;
+}
+
+section.store section {
+	margin-bottom: 1.5em;
+}
+
+section.store section h3 {
+	padding: 0.8em 1.2em;
+	font-size: 0.7rem;
+	font-weight: 700;
+	color: #7B7C7D;
+}
+
+section.store section li {
+	margin-bottom: 1px;
+}
+
+section.store section li a {
+	display: block;
+	background: #FFF url("https://cdn.mymd.jp/sp/static/img/common/ar-r.svg") no-repeat 97% 50% / 0.6rem auto;
+	padding: 0.8em 1em;
+}
+
+section.store section li img {
+	margin-right: 0.8em;
+	width: 1.4em;
+}
+
+section.store section li i {
+	display: block;
+	margin-bottom: 0.5em;
+	font-size: 0.6rem;
+}
+
+section.store section li em {
+	display: block;
+	margin-bottom: 0.3em;
+	font-weight: 700;
+}
+
+section.store section li span {
+	display: block;
+	line-height: 1.6;
+	font-size: 0.7rem;
+}
+
+section.store section p {
+	margin: 1em;
+}
+
+section.store section p .submit {
+	display: inline-block;
+	box-sizing: border-box;
+    border-radius: 0.5em;
+    background: #1E90FF;
+    padding: 0.8em;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #FFF;
+    cursor: pointer;
+}
+
+section.store section p .submit img {
+	width: 1.5em;
+	margin-right: 0.5em;
+	filter: brightness(1000%);
+}
+
+section.store section p a {
+	display: inline-block;
+	background: url("https://cdn.mymd.jp/sp/static/img/common/ar-r.svg") no-repeat 100% 50% / 0.6rem auto;
+	padding-right: 1.2em;
+	color: #1E90FF;
+}
+	
+section.store p.update {
+	margin: 2em 1em;
+	text-align: center;
+	font-size: 0.7rem;
+	color: #7B7C7D;
+}
+
+section.store dl {
+	background: #FFF;
+	padding: 0.8em 1em;
+	line-height: 1.5;
+}
+	
+section.store dt {
+	margin-bottom: 1em;
+	font-weight: 700;
+}
+
+section.store dd p {
+	margin-bottom: 0.5em;
+}
+
+section.store dd p a {
+	color: #1E90FF;
+}
+
+section.store dd p a[target] {
+	display: inline-block;
+	background: url("https://cdn.mymd.jp/sp/static/img/common/ar-b.svg") no-repeat 100% 50% / 0.6rem auto;
+	padding-right: 1.2em;
+}
+
+section.store .nav-link {
+	margin: 2em 0;
+}
+
+/* */
+
+section.mystore-comp {
+	position: relative;
+	background: rgba(0,0,0,0.3);
+	height: 100vh;
+	font-size: 0.8rem;
+}
+
+section.mystore-comp dl {
+	position: absolute;
+	top: 50%;
+	left: 14%;
+	margin-top: -3.25em;
+	border-radius: 0.8em;
+	background: #E7E7E7;
+	width: 72%;
+	text-align: center;
+}
+
+section.mystore-comp dt {
+	border-bottom: solid 1px #707070;
+	padding: 1em;
+}
+
+section.mystore-comp dd a {
+	display: block;
+	padding: 0.8em;
+	color: #1E90FF;
+}
+
+/* */
+
+section.mystore-help ul {
+	padding: 0.8em 1em;
+	line-height: 1.6;
+	font-size: 0.8rem;
+}
+
+section.mystore-help li {
+	position: relative;
+	margin-bottom: 0.5em;
+	padding-left: 1em;
+}
+
+section.mystore-help li::before {
+	content: '・';
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* */
+
+section.anshin {
+	background: #FFF;
+}
+
+section.anshin h2 {
+	padding: 0;
+}
+
+section.anshin dl {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: linear-gradient(to bottom right, #244990, #65C5F8);
+	padding: 0.8rem;
+	color: #FFF;
+}
+
+section.anshin dt {
+	line-height: 1.4;
+	font-size: 0.65rem;
+}
+
+section.anshin dd {
+	font-size: 1.2rem;
+}
+
+section.anshin dd b {
+	font-size: 133%;
+}
+
+section.anshin ul {
+	background: url("https://cdn.mymd.jp/sp/static/img/common/bg-anshin.png") repeat-y 50% 0 / 100% auto;
+	padding: 0.01em 1em;
+	min-height: 16rem;
+	font-size: 0.8rem;
+}
+
+section.anshin li {
+	margin: 1.5em 0;
+}
+
+section.anshin li em {
+	display: block;
+	position: relative;
+	margin-bottom: 0.5em;
+	padding-left: 1.2em;
+	font-size: 0.7rem;
+	font-weight: 700;
+}
+
+section.anshin li em::before {
+	content: '◆';
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #1F4D9A;
+}
+
+section.anshin li a {
+	display: block;
+	margin: 0 2%;
+	border-radius: 0.6rem;
+	background: #1F4D9A;
+	padding: 1.8em 1.2em;
+	line-height: 1.5;
+	font-weight: 700;
+	color: #FFF;
+}
+
+section.anshin li a.lines {
+	padding-top: 1.05em;
+	padding-bottom: 1.05em;
+}
+
+section.anshin li a[href^="tel:"] {
+	background: #1F4D9A url("https://cdn.mymd.jp/sp/static/img/common/ic-tel.png") no-repeat 5% 50% / 3.2em auto;
+	padding-left: 4.8em;
+}
+
+/* */
+
+section.cancel {
+	padding: 0.8rem;
+}
+
+section.cancel h2 {
+	margin: 0 -0.2em 0.8em;
+	background: url("https://cdn.mymd.jp/sp/static/img/common/mk-attention.svg") no-repeat 0 50% / 1.5em auto;
+	padding: 0.4em 0 0.4em 1.8em;
+	white-space: nowrap;
+	font-size: 1rem;
+	color: #004DA0;
+}
+
+section.cancel p {
+	margin-bottom: 1.5em;
+	line-height: 1.5;
+	font-size: 0.8rem;
+}
+
+section.cancel dl.attention {
+	margin-bottom: 1.6em;
+	background-color: #FFF;
+	padding: 0.8em 1em;
+	line-height: 1.5;
+	font-size: 0.7rem;;
+}
+
+section.cancel .attention dt {
+	margin-bottom: 0.2em;
+	background: url("https://cdn.mymd.jp/sp/static/img/common/mk-attention.svg") no-repeat 0 50% / 1.2em auto;
+	padding-left: 1.5em;
+	font-size: 0.8rem;
+	color: #D71318;
+}
+
+section.cancel .nav-cancel {
+	margin: 1.5rem 0;
+}
+
+section.cancel .nav-cancel a {
+	display: block;
+	position: relative;
+	border-radius: 0.5rem;
+	background-color: #7B7C7D;
+	padding: 0.7em 2.3em 0.7em 1em;
+	font-size: 0.9rem;
+	font-weight: 700;
+	color: #FFF;
+}
+
+section.cancel .nav-cancel a::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: calc(50% - 0.6em);
+	right: 0.6em;
+	background: url("https://cdn.mymd.jp/sp/static/img/common/a-r-cc.svg") 50% 50% / 100% auto;
+	width: 1.2em;
+	height: 1.2em;
+	filter: grayscale(1) brightness(1.6);
+}
+
+section.cancel .nav-top {
+	margin: 1.5rem 0;
+}
+
+section.cancel .nav-top a {
+	display: block;
+	position: relative;
+	border: none;
+	border-radius: 0.5rem;
+	background-color: #004DA0;
+	padding: 0.7em 2.3em 0.7em 1em;
+	text-align: left;
+	font-size: 0.9rem;
+	font-weight: 700;
+	color: #FFF;
+}
+
+section.cancel .nav-top a::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: calc(50% - 0.6em);
+	right: 0.6em;
+	background: url("https://cdn.mymd.jp/sp/static/img/common/a-r-cc.svg") 50% 50% / 100% auto;
+	width: 1.2em;
+	height: 1.2em;
+}
+
+section.cancel a:hover {
+	opacity: 0.7;
+}
+
+/* */
+/* 2021.04.04追加↓ */
+section.guides {
+	padding-bottom: 3rem;
+}
+
+section.guides li {
+	margin-bottom: 1px;
+}
+
+section.guides li a {
+	display: flex;
+	align-items: center;
+	background: #FFF url("https://cdn.mymd.jp/sp/static/img/common/ar-r.svg") no-repeat 97% 50% / 0.6rem auto;
+	padding: 0 2em 0 1em;
+	height: 3.6em;
+	font-size: 0.75rem;
+	font-weight: 700;
+	color: #1B4890;
+}
+
+section.guides li i {
+	display: inline-block;
+	margin-right: 1em;
+	width: 6.5rem;
+	text-align: center;
+}
+
+section.guides li:first-child a,
+section.guides li:last-child a {
+	font-size: 0.8rem;
+}
+
+section.guides li [src*="bt-member-c"] {
+	width: 2.4rem;
+}
+
+section.guides li [src*="ic-otoku-c"] {
+	width: 2.4rem;
+}
+
+section.guides li [src*="ic-yamadapay-c"] {
+	width: 3.6rem;
+}
+
+section.guides li [src*="lg-yamada_webcom"] {
+	width: 6.5rem;
+}
+
+section.guides li [src*="lg-yamada_mall"] {
+	width: 5.5rem;
+}
+
+section.guides li [src*="ic-entertainment-c"] {
+	width: 2.3rem;
+}
+
+section.guides li [src*="ic-chirashi-c"] {
+	width: 2.8rem;
+}
+
+section.guides li [src*="ic-storesearch-c"] {
+	width: 2.3rem;
+}
+
+section.guides li [src*="ic-mypage-c"] {
+	width: 2.1rem;
+}
+
+section.guide {
+	background: #FFF;
+	padding: 0.8rem;
+}
+
+section.guide h2 {
+	margin: 0 -0.8rem 1em;
+	border-bottom: solid 0.2rem;
+	padding: 0.3em 0.8rem;
+	font-size: 1.05rem;
+	color: #1B4890;
+}
+
+section.guide .summary {
+	margin: 0 -0.5rem 1rem;
+	text-align: center;
+	white-space: nowrap;
+	line-height: 1.5;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+section.guide .caption {
+	margin: 0 auto 1rem;
+}
+
+section.guide dt {
+	position: relative;
+	margin-bottom: 0.2em;
+	padding-left: 1.8em;
+	line-height: 1.4;
+	font-size: 0.9rem;
+	font-weight: 700;
+	color: #1B4890;
+}
+
+section.guide b {
+	display: inline-block;
+	position: absolute;
+	top: -0.1em;
+	left: 0;
+	border-radius: 0.75em;
+	background: #1B4890;
+	padding: 0.05em;
+	width: 1.4em;
+	text-align: center;
+	color: #FFF;
+}
+
+section.guide dd {
+	margin-bottom: 1em;
+	line-height: 1.5;
+	font-size: 0.8rem;
+}
+/* 2021.04.04追加↑ */
+
+/* 2021.04.24追加↓ */
+section.faq {
+	padding-bottom: 3rem;
+	font-size: 0.8rem;
+}
+
+section.faq .nav-section {
+	background-color: #FFF;
+	padding: 0.8rem;
+	line-height: 1.5;
+}
+
+section.faq .nav-section li {
+	margin-bottom: 0.5em;
+}
+
+section.faq .nav-section li a {
+	display: inline-block;
+	border-bottom: solid 1px;
+}
+
+section.faq section {
+	background: #FFF;
+	padding: 0.8rem;
+}
+
+section.faq section h3 {
+	margin: 0 -0.8rem 0.5em;
+	border-bottom: solid 0.2rem;
+	padding: 0.3em 0.8rem;
+	font-size: 1.05rem;
+	color: #1B4890;
+}
+
+
+section.faq section dl {
+	margin-bottom: 0.5em;
+	line-height: 1.5;
+}
+
+section.faq section dl:nth-of-type(n+2) {
+	border-top: solid 1px #CCC;
+	padding-top: 0.5em;
+}
+
+section.faq section dt {
+	position: relative;
+	padding-left: 1.5em;
+	color: #1B4890;
+}
+
+section.faq section dt b {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+section.faq section dd {
+	position: relative;
+	padding-top: 0.5em;
+	padding-left: 1.5em;
+}
+
+section.faq section dd b {
+	position: absolute;
+	top: 0.5em;
+	left: 0;
+}
+
+section.faq section dd i {
+	display: block;
+	margin: 0.5em;
+	text-align: center;
+}
+
+/* 2021.04.24追加↑ */
+
+/* */
+
+div.modal-layer {
+}
+
+section.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	overflow: auto;
+	box-sizing: border-box;
+	background: rgba(0,0,0,0.8);
+	padding: 0.8rem 0.8rem 6.4rem;
+	width: 100%;
+	height: 100vh;
+	display: none;
+}
+
+section.modal h3 {
+	margin-bottom: 1.5em;
+	text-align: center;
+	font-size: 0.8rem;
+	color: #FFF;
+}
+
+section.modal h3 img {
+	display: block;
+	margin: 0 auto 0.4em;
+	width: 2em;
+	filter: grayscale(100%) brightness(1000%);
+}
+
+section.modal ul {
+	border-radius: 0.4rem;
+	background: #FFF;
+	padding: 0 1em;
+	line-height: 1.4;
+	font-size: 0.7rem;
+}
+
+section.modal li:nth-child(n+2) {
+	border-top: solid 1px #EEE;
+}
+
+section.modal li a {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 -1em;
+	background: url("https://cdn.mymd.jp/sp/static/img/common/ar-b.svg") no-repeat 96% 50% / 0.6rem auto;
+	padding: 1em 2.5em 1em 1em;
+}
+
+section.modal li img {
+	width: 33.333%;
+}
+
+section.modal li span {
+	display: block;
+}
+
+section.modal li img + span {
+	width: 60%;
+}
+
+section.modal li span em {
+	display: block;
+	margin-bottom: 0.3em;
+	line-height: 1.25;
+	font-size: 114.2%;
+	font-weight: 700;
+}
+
+section.modal .close {
+	position: absolute;
+	top: 0.7rem;
+	left: 1em;
+	width: 1.2rem;
+	cursor: pointer;
+}
+
+.mail-questionaire {
+	font-size: 0.8rem;
+	background: #fff;
+	margin: 1.6em 1em;
+	padding: 1em;
+	border: 1px solid #dbdbdb;
+	line-height: 1.5;
+}
+
+section.mail .mail-questionaire p {
+	margin: 0;
+}
+
+section.mail .mail-questionaire label {
+	position: relative;
+	display: block;
+}
+
+section.mail .mail-questionaire [type="checkbox"] {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+section.mail .mail-questionaire ul {
+	border-top: 1px solid #dbdbdb;
+	margin-top: 1em;
+}
+
+section.mail .mail-questionaire li {
+	padding: 10px 0;
+}
+
+section.mail .mail-questionaire li + li {
+	border-top: 1px solid #dbdbdb;
+}
+
+section.mail .mail-questionaire ul {
+	list-style: none;
+	padding-left: 20px;
+}
+
+.y-form {
+	margin-left: 20px;
+	padding: 15px;
+	border: 1px solid #dbdbdb;
+	border-radius: 4px;
+	margin-top: 10px;
+	background: #f6f6f6;
+	display: none;
+}
+
+.y-form .memo {
+	margin-top: 10px!important;
+}
+
+section.mail .mail-questionaire .y-form ul {
+	padding-left: 0;
+}
+
+section.mail .mail-questionaire .y-form li:last-child {
+	padding-bottom: 0;
+}
+
+/* 2021.09.01 追加↓ */
+section.guides li [src*="lg-yamada_neobank"] {
+width: 4.5rem;
+}
+section.guides li [src*="ic-service-c"] {
+width: 1.8rem;
+}
+/* 2021.09.01 追加↑ */
+
+/* 2021.09.02 追加↓ */
+
+section.step {
+  background: #FFF;
+  padding: 0.8rem;
+}
+
+section.step h2 {
+  margin: 0 -0.2em 0.8em;
+  background: url("https://cdn.mymd.jp/sp/static/img/common/ic-yamadapay-c.svg") no-repeat 4% 50% / 3.5em auto;
+  padding: 0.4em 0 0.4em 5em;
+  white-space: nowrap;
+  font-size: 1rem;
+  color: #004DA0;
+  border-bottom: solid 0.2rem;
+  margin: 0 -0.8rem 1em;
+}
+
+section.step p {
+  margin-bottom: 1.5em;
+  line-height: 1.5;
+  font-size: 0.8rem;
+}
+
+section.step .face_recognition {
+  margin-bottom: 1rem;
+}
+
+section.step .face_recognition h3 {
+  color: #1c4594;
+}
+
+section.step .face_recognition h3 span {
+  display: block;
+  color: #000;
+  font-weight: normal;
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+
+section.step .face_recognition img {
+  margin-top: -1rem;
+  margin-bottom: 5px;
+}
+
+section.step .face_recognition p {
+  margin-bottom: 0.5em;
+}
+
+section.step .face_recognition p.service {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  color: #c72f25;
+  letter-spacing: -1.5px;
+}
+
+section.step p.attention {
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background: #c72f25;
+  line-height: 1.3;
+  padding: 0.4em 0;
+  margin-bottom: 0.1em;
+}
+
+section.step .face_recognition p.center {
+  text-align: center;
+}
+
+section.step .nav-btWrap {
+  margin: 0.5rem 0 1rem;
+}
+
+section.step .nav-btWrap a {
+  display: block;
+  position: relative;
+  border-radius: 1rem;
+  background: rgb(79, 151, 201);
+  background: linear-gradient(180deg, rgba(79, 151, 201, 1) 0%, rgba(28, 70, 142, 1) 100%);
+  padding: 0.7em 2.3em 0.7em 1em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #FFF;
+  margin-bottom: 0.5em;
+}
+
+section.step .nav-btWrap a.ex {
+  background: rgb(231, 178, 101);
+  background: linear-gradient(180deg, rgba(231, 178, 101, 1) 0%, rgba(223, 150, 42, 1) 100%);
+}
+
+section.step .nav-btWrap a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: calc(50% - 0.6em);
+  right: 0.6em;
+  background: url("https://cdn.mymd.jp/sp/static/img/common/a-r-cl.svg") 50% 50% / 100% auto;
+  width: 1.2em;
+  height: 1.2em;
+  filter: grayscale(1) brightness(1.6);
+}
+
+
+section.step .stepWrap {
+  margin-bottom: 1em;
+  margin-top: -30px;
+  padding-top: 30px;
+}
+
+.stepbar {
+  display: flex;
+  margin: 0 -0.8rem;
+}
+
+.item {
+  display: inline-block;
+  font-size: 16px;
+  padding: .5em 1.6em .3em;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+  letter-spacing: 1px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+.item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: #01579B;
+  transform: scaleY(1.3) perspective(.6em) rotateX(5deg);
+  transform-origin: bottom;
+}
+
+ul li:nth-child(2) .item::before {
+  background: #4674cd;
+  border-bottom: 1px solid #fff;
+}
+
+.step2 ul li:nth-child(1) .item::before {
+  background: #4674cd;
+  border-bottom: 1px solid #fff;
+}
+
+.step2 ul li:nth-child(2) .item::before {
+  background: #01579B;
+  border-bottom: none;
+}
+
+#step2Wrap {
+  display: none;
+}
+
+.step2 #step1Wrap {
+  display: none;
+}
+
+.step2 #step2Wrap {
+  display: block;
+}
+
+section.step .stepWrap .ttl {
+  background: #305497;
+  color: #fff;
+  font-weight: bold;
+
+  padding: 0.8em;
+  font-size: 0.9rem;
+  margin: 0 -0.8rem 1em;
+}
+
+section.step .stepWrap p {
+  margin-bottom: 0;
+  line-height: 1.6;
+  font-size: 0.8rem;
+}
+
+section.step .stepWrap p.check {
+  background: url("https://cdn.mymd.jp/sp/static/img/common/ic_check.svg") 0 3px no-repeat;
+  background-size: 0.9em;
+  text-indent: 1em;
+
+}
+
+section.step .stepWrap p.ttl2 {
+  background: url("https://cdn.mymd.jp/sp/static/img/common/ic_maru.svg") 0 6px no-repeat;
+  background-size: 0.9em;
+  text-indent: 1em;
+  color: #719ce8;
+  margin-top: 0.5em;
+}
+
+.appWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5em -10px;
+}
+
+.appWrap li {
+padding: 0 10px;
+}
+
+.step p a {
+  color: #0098dc;
+  text-decoration: underline;
+}
+
+/* 規約 */
+section.kiyaku {
+  padding-bottom: 3rem;
+  font-size: 0.8rem;
+}
+
+section.kiyaku section {
+  background: #FFF;
+  padding: 0.8rem;
+}
+
+section.kiyaku section h3 {
+  margin: 0 -0.8rem 0.5em;
+  border-bottom: solid 0.2rem;
+  padding: 0.3em 0.8rem;
+  font-size: 1.05rem;
+  color: #1B4890;
+}
+
+section.kiyaku p {
+  margin-bottom: 1em;
+  line-height: 1.6;
+  font-size: 0.8rem;
+}
+

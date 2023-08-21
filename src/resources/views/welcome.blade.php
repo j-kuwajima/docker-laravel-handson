@@ -1,132 +1,162 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--tw-bg-opacity: 1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-gray-100{--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity))}.border-gray-200{--tw-border-opacity: 1;border-color:rgb(229 231 235 / var(--tw-border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{--tw-shadow: 0 1px 3px 0 rgb(0 0 0 / .1), 0 1px 2px -1px rgb(0 0 0 / .1);--tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow)}.text-center{text-align:center}.text-gray-200{--tw-text-opacity: 1;color:rgb(229 231 235 / var(--tw-text-opacity))}.text-gray-300{--tw-text-opacity: 1;color:rgb(209 213 219 / var(--tw-text-opacity))}.text-gray-400{--tw-text-opacity: 1;color:rgb(156 163 175 / var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity))}.text-gray-600{--tw-text-opacity: 1;color:rgb(75 85 99 / var(--tw-text-opacity))}.text-gray-700{--tw-text-opacity: 1;color:rgb(55 65 81 / var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity: 1;color:rgb(17 24 39 / var(--tw-text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity))}.dark\:bg-gray-900{--tw-bg-opacity: 1;background-color:rgb(17 24 39 / var(--tw-bg-opacity))}.dark\:border-gray-700{--tw-border-opacity: 1;border-color:rgb(55 65 81 / var(--tw-border-opacity))}.dark\:text-white{--tw-text-opacity: 1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:text-gray-400{--tw-text-opacity: 1;color:rgb(156 163 175 / var(--tw-text-opacity))}.dark\:text-gray-500{--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity))}}
-        </style>
-
-        <style>
-            body {
-                font-family: 'Nunito', sans-serif;
-            }
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">
-                        <g clip-path="url(#clip0)" fill="#EF3B2D">
-                            <path d="M248.032 44.676h-16.466v100.23h47.394v-14.748h-30.928V44.676zM337.091 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.431 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162-.001 2.863-.479 5.584-1.432 8.161zM463.954 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.432 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162 0 2.863-.479 5.584-1.432 8.161zM650.772 44.676h-15.606v100.23h15.606V44.676zM365.013 144.906h15.607V93.538h26.776V78.182h-42.383v66.724zM542.133 78.182l-19.616 51.096-19.616-51.096h-15.808l25.617 66.724h19.614l25.617-66.724h-15.808zM591.98 76.466c-19.112 0-34.239 15.706-34.239 35.079 0 21.416 14.641 35.079 36.239 35.079 12.088 0 19.806-4.622 29.234-14.688l-10.544-8.158c-.006.008-7.958 10.449-19.832 10.449-13.802 0-19.612-11.127-19.612-16.884h51.777c2.72-22.043-11.772-40.877-33.023-40.877zm-18.713 29.28c.12-1.284 1.917-16.884 18.589-16.884 16.671 0 18.697 15.598 18.813 16.884h-37.402zM184.068 43.892c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002-35.648-20.524a2.971 2.971 0 00-2.964 0l-35.647 20.522-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v38.979l-29.706 17.103V24.493a3 3 0 00-.103-.776c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002L40.098 1.396a2.971 2.971 0 00-2.964 0L1.487 21.919l-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v122.09c0 1.063.568 2.044 1.489 2.575l71.293 41.045c.156.089.324.143.49.202.078.028.15.074.23.095a2.98 2.98 0 001.524 0c.069-.018.132-.059.2-.083.176-.061.354-.119.519-.214l71.293-41.045a2.971 2.971 0 001.489-2.575v-38.979l34.158-19.666a2.971 2.971 0 001.489-2.575V44.666a3.075 3.075 0 00-.106-.774zM74.255 143.167l-29.648-16.779 31.136-17.926.001-.001 34.164-19.669 29.674 17.084-21.772 12.428-43.555 24.863zm68.329-76.259v33.841l-12.475-7.182-17.231-9.92V49.806l12.475 7.182 17.231 9.92zm2.97-39.335l29.693 17.095-29.693 17.095-29.693-17.095 29.693-17.095zM54.06 114.089l-12.475 7.182V46.733l17.231-9.92 12.475-7.182v74.537l-17.231 9.921zM38.614 7.398l29.693 17.095-29.693 17.095L8.921 24.493 38.614 7.398zM5.938 29.632l12.475 7.182 17.231 9.92v79.676l.001.005-.001.006c0 .114.032.221.045.333.017.146.021.294.059.434l.002.007c.032.117.094.222.14.334.051.124.088.255.156.371a.036.036 0 00.004.009c.061.105.149.191.222.288.081.105.149.22.244.314l.008.01c.084.083.19.142.284.215.106.083.202.178.32.247l.013.005.011.008 34.139 19.321v34.175L5.939 144.867V29.632h-.001zm136.646 115.235l-65.352 37.625V148.31l48.399-27.628 16.953-9.677v33.862zm35.646-61.22l-29.706 17.102V66.908l17.231-9.92 12.475-7.182v33.841z"/>
-                        </g>
-                    </svg>
-                </div>
-
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6">
-                            <div class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-500"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel.com/docs" class="underline text-gray-900 dark:text-white">Documentation</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                            <div class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-500"><path stroke-linecap="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" /></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laracasts.com" class="underline text-gray-900 dark:text-white">Laracasts</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                            <div class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-500"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" /></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel-news.com/" class="underline text-gray-900 dark:text-white">Laravel News</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-                            <div class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-500"><path stroke-linecap="round" stroke-linejoin="round" d="M6.115 5.19l.319 1.913A6 6 0 008.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 002.288-4.042 1.087 1.087 0 00-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 01-.98-.314l-.295-.295a1.125 1.125 0 010-1.591l.13-.132a1.125 1.125 0 011.3-.21l.603.302a.809.809 0 001.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 001.528-1.732l.146-.292M6.115 5.19A9 9 0 1017.18 4.64M6.115 5.19A8.965 8.965 0 0112 3c1.929 0 3.716.607 5.18 1.64" /></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline">Forge</a>, <a href="https://vapor.laravel.com" class="underline">Vapor</a>, <a href="https://nova.laravel.com" class="underline">Nova</a>, and <a href="https://envoyer.io" class="underline">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline">Telescope</a>, and more.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 sm:text-left">
-                        <div class="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="-mt-px w-5 h-5 text-gray-400">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                            </svg>
-
-                            <a href="https://laravel.bigcartel.com" class="ml-1 underline">
-                                Shop
-                            </a>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ml-4 -mt-px w-5 h-5 text-gray-400">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                            </svg>
-
-                            <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
-                                Sponsor
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-                    </div>
-                </div>
-            </div>
+<html lang="ja">
+<head prefix="og:  fb:  article: ">
+  <meta charset="Shift_JIS">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0">
+  <title>新規会員登録 | ベスト電器</title>
+  <link rel="icon" href="https://www.bestdenki.ne.jp/wordpress/wp-content/themes/bestdenki/common/img/best-denki_favicon.ico">
+  <link rel="icon alternate" href="https://www.bestdenki.ne.jp/wordpress/wp-content/themes/bestdenki/common/img/best-denki_favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="https://cache.ymall.jp/assets/v2/image/favicon.ico">
+  <link rel="apple-touch-icon" href="https://cache.ymall.jp/assets/v2/image/apple-touch-icon-precomposed.png">
+  <meta name="description" content="">
+  <meta property="og:title" content="新規会員登録">
+  <meta property="og:site_name" content="新規会員登録">
+  <meta property="og:type" content="article">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="https://www.yamada-denkiweb.com/">
+  <meta property="og:image" content="">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="canonical" href="">
+  <link rel="stylesheet" href="https://cache.ymall.jp/assets/v2/style/style-1.5.4.css">
+  <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script>
+  <script type="text/javascript" src="https://cache.ymall.jp/assets/v2/js/jquery-3.6.0.min.js" charset="UTF-8"></script>
+  <script type="text/javascript" src="js/analytics.js"></script>
+  <script src="https://cache.ymall.jp/js/ajaxzip3-https.js?t=20220506" charset="UTF-8"></script>
+  <link rel="stylesheet" href="css/best_dev.css">
+  <script type="text/javascript" async="" src="js/best_dev.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <header class="l-header" style="  opacity: 0;">
+      <div class="l-header-top" style="  z-index: -1;">
+        <div class="header-logo" style="background: white;border-bottom: 1px solid gray;padding: 0px;z-index: -555;opacity: 0;">
+          <a href="トップ画面.html" class="header-logo__image" style="display: block;    height: fit-content;padding: 10px;">
+            <picture>
+              <source srcset="https://www.bestdenki.ne.jp/wordpress/wp-content/themes/bestdenki/common/img/h_logo.png" type="image/webp"> <img src="https://www.bestdenki.ne.jp/wordpress/wp-content/themes/bestdenki/common/img/h_logo.png" width="195" height="32" alt="ヤマダウェブコム" loading="lazy"> </picture>
+          </a>
         </div>
-    </body>
+      </div>
+    </header>
+    <header id="header">
+      <div class="inner">
+        <div class="l-header-top">
+          <div class="header-logo" style="background: white;border-bottom: 1px solid gray;padding: 0px;z-index: 999;">
+            <a href="トップ画面.html" class="header-logo__image" style="display: block;    height: fit-content;padding: 10px;">
+              <picture>
+                <source srcset="https://www.bestdenki.ne.jp/wordpress/wp-content/themes/bestdenki/common/img/h_logo.png" type="image/webp"> <img src="https://www.bestdenki.ne.jp/wordpress/wp-content/themes/bestdenki/common/img/h_logo.png" width="195" height="32" alt="ヤマダウェブコム" loading="lazy"> </picture>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="contents">
+      <div class="l-base-e l-grid">
+        <div class="l-grid-col1">
+          <div class="l-content">
+            <h1 class="signin-section__title">ログイン</h1>
+            <form method="POST" action="{{ route('login') }}">
+                @csrf
+              <div class="signin-section">
+                <div class="l-input-field">
+                  <div class="l-input-field__title"> メールアドレス </div>
+                  <div class="l-input-field__contain">
+                    <div class="text-input__input"> 
+                        <input type="hidden" name="token" value="aa691807ba26e7f202f431a8b38b00280a28aee4"> 
+                        <input id="email" type="email" class="text-input__input-inner @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="例　best@denki.com" required autocomplete="email" autofocus>
+ 
+                        @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                        <span class="text-input__check">
+                            <svg class="icon" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_2089_564912)">
+                                    <path d="M15.6402 0.129132C15.588 0.0738691 15.5258 0.0299716 15.4571 3.72529e-09C15.3884 -0.0299716 15.3147 -0.0454102 15.2402 -0.0454102C15.1657 -0.0454102 15.0919 -0.0299716 15.0232 3.72529e-09C14.9546 0.0299716 14.8923 0.0738691 14.8402 0.129132L7.64016 7.62451C7.58802 7.67977 7.5258 7.72367 7.45711 7.75364C7.38843 7.78362 7.31468 7.79905 7.24018 7.79905C7.16568 7.79905 7.09193 7.78362 7.02325 7.75364C6.95456 7.72367 6.89231 7.67977 6.84017 7.62451L3.16905 3.82144C3.11691 3.76618 3.05469 3.72228 2.986 3.69231C2.91732 3.66234 2.84357 3.6469 2.76907 3.6469C2.69457 3.6469 2.6208 3.66234 2.55211 3.69231C2.48343 3.72228 2.4212 3.76618 2.36906 3.82144L1.16905 5.0676C1.11584 5.12175 1.07357 5.18636 1.0447 5.25769C1.01584 5.32902 1.00098 5.4056 1.00098 5.48297C1.00098 5.56033 1.01584 5.63694 1.0447 5.70827C1.07357 5.7796 1.11584 5.84422 1.16905 5.89836L4.84017 9.71068L5.64016 10.5507L6.84017 11.7968C6.89231 11.8521 6.95456 11.896 7.02325 11.926C7.09193 11.9559 7.16568 11.9714 7.24018 11.9714C7.31468 11.9714 7.38843 11.9559 7.45711 11.926C7.5258 11.896 7.58802 11.8521 7.64016 11.7968L8.84017 10.5507L9.64016 9.71068L16.8402 2.22451C16.946 2.11235 17.0053 1.96157 17.0053 1.80452C17.0053 1.64747 16.946 1.49666 16.8402 1.3845L15.6402 0.129132Z"></path>
+                                </g>
+                            </svg>
+                        </span> 
+                    </div>
+                  </div>
+                </div>
+                <div class="l-input-field">
+                  <div class="l-input-field__title"> パスワード </div>
+                  <div class="l-input-field__contain">
+                    <div class="text-input__input"> 
+                        <input id="password" type="password" class="text-input__input-inner @error('password') is-invalid @enderror" placeholder="半角英数字6～20文字" pattern="^[a-zA-Z0-9]+$" name="password" required autocomplete="current-password">
+                        @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                        <span class="text-input__hidden">
+                            <span class="text-input__hidden-icon">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_838_82021)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M22.6591 10.7394C22.4539 10.4617 18.4184 5 11.997 5C5.43703 5 1.32703 10.69 1.32703 10.75C1.1105 11.131 0.996664 11.5618 0.996664 12C0.996664 12.4382 1.1105 12.869 1.32703 13.25C1.32787 13.2511 1.33052 13.2546 1.33495 13.2606C1.54012 13.5383 5.57563 19 11.997 19C18.557 19 22.667 13.31 22.667 13.25C22.8836 12.869 22.9974 12.4382 22.9974 12C22.9974 11.5618 22.8836 11.131 22.667 10.75C22.6662 10.7489 22.6635 10.7454 22.6591 10.7394ZM0.507029 10.18C0.547029 10.12 4.84703 4 11.997 4C19.147 4 23.497 10.12 23.497 10.18C23.8287 10.7291 24.0041 11.3585 24.0041 12C24.0041 12.6415 23.8287 13.2709 23.497 13.82C23.497 13.88 19.157 20 12.007 20C5.05569 20 0.798173 14.2154 0.521009 13.8388C0.513088 13.828 0.508418 13.8217 0.507029 13.82C0.175326 13.2709 0 12.6415 0 12C0 11.3585 0.175326 10.7291 0.507029 10.18ZM13.9406 9.08987C13.365 8.70529 12.6883 8.50001 11.9961 8.50001C11.0678 8.50001 10.1776 8.86876 9.52122 9.52514C8.86484 10.1815 8.4961 11.0718 8.4961 12C8.4961 12.6922 8.70137 13.3689 9.08595 13.9445C9.47054 14.5201 10.0172 14.9687 10.6567 15.2336C11.2962 15.4985 12 15.5678 12.6789 15.4328C13.3578 15.2977 13.9815 14.9644 14.471 14.4749C14.9605 13.9854 15.2938 13.3618 15.4288 12.6828C15.5639 12.0039 15.4946 11.3002 15.2297 10.6606C14.9648 10.0211 14.5162 9.47445 13.9406 9.08987ZM9.49603 8.2584C10.2361 7.76394 11.1061 7.50001 11.9961 7.50001C12.5874 7.49869 13.1732 7.61419 13.7197 7.83987C14.2663 8.06555 14.7629 8.39696 15.181 8.81509C15.5991 9.23322 15.9306 9.72982 16.1562 10.2764C16.3819 10.8229 16.4974 11.4087 16.4961 12C16.4961 12.89 16.2322 13.7601 15.7377 14.5001C15.2432 15.2401 14.5404 15.8169 13.7182 16.1575C12.8959 16.4981 11.9911 16.5872 11.1182 16.4135C10.2453 16.2399 9.44345 15.8113 8.81412 15.182C8.18478 14.5527 7.7562 13.7508 7.58256 12.8779C7.40893 12.005 7.49804 11.1002 7.83864 10.2779C8.17923 9.45567 8.75601 8.75287 9.49603 8.2584Z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </span> 
+                            <span class="text-input__hidden-icon is-active">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_838_82021)">
+                                        <path
+                                            d="M23.5 10.18C22.5138 8.89108 21.3488 7.74957 20.04 6.78999L19.32 7.50999C20.5903 8.41891 21.7191 9.51073 22.67 10.75C22.8865 11.131 23.0003 11.5618 23.0003 12C23.0003 12.4382 22.8865 12.869 22.67 13.25C22.67 13.31 18.56 19 12 19C10.7795 18.9961 9.56749 18.7969 8.40996 18.41L7.62996 19.2C9.0274 19.7246 10.5073 19.9955 12 20C19.15 20 23.45 13.88 23.49 13.82C23.8232 13.2718 24.0002 12.6429 24.002 12.0014C24.0037 11.3599 23.8302 10.73 23.5 10.18Z">
+                                        </path>
+                                        <path
+                                            d="M1.32996 13.25C1.11343 12.869 0.999594 12.4382 0.999594 12C0.999594 11.5618 1.11343 11.131 1.32996 10.75C1.32996 10.69 5.43996 5 12 5C13.2204 5.00391 14.4324 5.20309 15.59 5.59L16.37 4.8C14.9725 4.27537 13.4926 4.00445 12 4C4.84996 4 0.549958 10.12 0.509958 10.18C0.178255 10.7291 0.00292969 11.3585 0.00292969 12C0.00292969 12.6415 0.178255 13.2709 0.509958 13.82C1.49608 15.1089 2.66117 16.2504 3.96996 17.21L4.68996 16.49C3.41611 15.5819 2.28381 14.49 1.32996 13.25Z">
+                                        </path>
+                                        <path
+                                            d="M7.49996 12C7.50572 12.4838 7.59016 12.9634 7.74996 13.42L8.55996 12.61C8.52465 12.4085 8.5046 12.2046 8.49996 12C8.49996 11.0717 8.86871 10.1815 9.52508 9.52513C10.1815 8.86875 11.0717 8.5 12 8.5C12.2045 8.50464 12.4084 8.52469 12.61 8.56L13.42 7.75C12.7451 7.51378 12.0234 7.44363 11.3157 7.54549C10.608 7.64735 9.9353 7.91822 9.35451 8.33518C8.77372 8.75213 8.30194 9.30289 7.97912 9.94083C7.6563 10.5788 7.49194 11.2851 7.49996 12Z">
+                                        </path>
+                                        <path
+                                            d="M16.5 12C16.4942 11.5162 16.4098 11.0366 16.25 10.58L15.44 11.39C15.4753 11.5915 15.4953 11.7954 15.5 12C15.5 12.9283 15.1312 13.8185 14.4748 14.4749C13.8185 15.1312 12.9282 15.5 12 15.5C11.7954 15.4954 11.5915 15.4753 11.39 15.44L10.58 16.25C11.2548 16.4862 11.9766 16.5564 12.6842 16.4545C13.3919 16.3527 14.0646 16.0818 14.6454 15.6648C15.2262 15.2479 15.698 14.6971 16.0208 14.0592C16.3436 13.4212 16.508 12.7149 16.5 12Z">
+                                        </path>
+                                        <path
+                                            d="M4.54996 19.96C4.44927 19.9598 4.35091 19.9297 4.26727 19.8737C4.18363 19.8176 4.11845 19.738 4.07996 19.645C4.04146 19.552 4.03136 19.4496 4.05094 19.3508C4.07051 19.2521 4.11889 19.1613 4.18996 19.09L19.09 4.19C19.1872 4.1036 19.3137 4.0576 19.4438 4.06143C19.5738 4.06526 19.6974 4.11862 19.7894 4.21059C19.8813 4.30256 19.9347 4.42619 19.9385 4.55621C19.9423 4.68622 19.8964 4.81278 19.81 4.91L4.90996 19.81C4.81457 19.9057 4.68509 19.9597 4.54996 19.96Z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </span> 
+                        </span> 
+                        <span class="text-input__check">
+                            <svg class="icon" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_2089_564912)">
+                                    <path
+                                        d="M15.6402 0.129132C15.588 0.0738691 15.5258 0.0299716 15.4571 3.72529e-09C15.3884 -0.0299716 15.3147 -0.0454102 15.2402 -0.0454102C15.1657 -0.0454102 15.0919 -0.0299716 15.0232 3.72529e-09C14.9546 0.0299716 14.8923 0.0738691 14.8402 0.129132L7.64016 7.62451C7.58802 7.67977 7.5258 7.72367 7.45711 7.75364C7.38843 7.78362 7.31468 7.79905 7.24018 7.79905C7.16568 7.79905 7.09193 7.78362 7.02325 7.75364C6.95456 7.72367 6.89231 7.67977 6.84017 7.62451L3.16905 3.82144C3.11691 3.76618 3.05469 3.72228 2.986 3.69231C2.91732 3.66234 2.84357 3.6469 2.76907 3.6469C2.69457 3.6469 2.6208 3.66234 2.55211 3.69231C2.48343 3.72228 2.4212 3.76618 2.36906 3.82144L1.16905 5.0676C1.11584 5.12175 1.07357 5.18636 1.0447 5.25769C1.01584 5.32902 1.00098 5.4056 1.00098 5.48297C1.00098 5.56033 1.01584 5.63694 1.0447 5.70827C1.07357 5.7796 1.11584 5.84422 1.16905 5.89836L4.84017 9.71068L5.64016 10.5507L6.84017 11.7968C6.89231 11.8521 6.95456 11.896 7.02325 11.926C7.09193 11.9559 7.16568 11.9714 7.24018 11.9714C7.31468 11.9714 7.38843 11.9559 7.45711 11.926C7.5258 11.896 7.58802 11.8521 7.64016 11.7968L8.84017 10.5507L9.64016 9.71068L16.8402 2.22451C16.946 2.11235 17.0053 1.96157 17.0053 1.80452C17.0053 1.64747 16.946 1.49666 16.8402 1.3845L15.6402 0.129132Z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </span> 
+                    </div>
+                  </div>
+                </div>
+                <div class="checkbox"> 
+                    <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                    <label for="remember">次回からメールアドレスの入力を省略する</label> 
+                </div>
+                <div class="l-buttons-row-center"> 
+                    <button type="Submit" class="button button-primary button-medium-short" style="background: linear-gradient(180deg,#f53d3d,#F60000 98.57%);border: 1px solid #F60000;">ログイン</button> 
+                </div> 
+                <a href="{{ route('password.request') }}" class="links">パスワードをお忘れの方はこちら</a> </div>
+            </form>
+            <div class="signin-section">
+              <h2 class="h2">初めてベスト電器アプリをご利用される方</h2>
+              <div class="l-buttons-row-center mt24"> <a href="{{ route('register') }}" class="button button-secondary button-medium-short">新規会員登録する</a> </div>
+              <p class="typo-body">会員登録頂くとポイントを貯めてお得にお買いものができます。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="https://cache.ymall.jp/assets/v2/js/bundle-1.5.1.js"></script>
+  <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=default%2CHTMLPictureElement"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+            Drilldown.spNavInit()
+        });
+  </script>
+</body>
 </html>

@@ -1,0 +1,367 @@
+@charset "utf-8";
+
+/* ------------------------- TOC 
+base
+css hack
+ ------------------------- */
+
+/* base ------------------------------ */
+
+* {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+html {
+}
+
+body {
+	font-size: 15px ;
+	font-family: "Helvetica","HiraKakuProN-W3";
+	line-height: 1.4;
+	-webkit-text-size-adjust: none ;
+	background: #344fa4 ;
+}
+
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; }
+ul, ol, dl, li, dt, dd { list-style: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+th { font-weight: normal; }
+th, td { vertical-align: top; }
+a { border: 0; vertical-align: bottom; }
+img { border: 0; vertical-align: bottom; }
+i, em, address { font-style: normal; }
+input, button { line-height: normal; }
+
+a { color: #103092; text-decoration: underline ;}
+a:link { color: #103092; text-decoration: underline ;}
+a:visited { color: #103092; text-decoration: underline ;}
+a:hover, a:active { color: #103092 ; text-decoration: none ; }
+a img, a:link img, a:visited img, a:hover img, a:active img { border: none; text-decoration: none; }
+
+a {
+	outline-color:-moz-use-text-color;
+	outline-style:none;
+	outline-width:medium;
+}
+
+p { margin: 0 0 10px ; padding: 0 ; }
+
+em{color: #ff0011 ;}
+strong{font-weight: bold ;}
+textarea{ line-height: 1.4 ;}
+
+input[type="submit"]{ font-size: 100% ;padding: 5px 3px 3px ; }
+input[type="text"],input[type="password"]{ width: 200px ;font-size: 100% ;padding: 3px ; }
+input[type="radio"],input[type="checkbox"]{ margin-right: 3px ; }
+select{ font-size: 100% ; }
+
+
+/* css hack ------------------------------ */
+
+/* floating box clear */
+
+.clearfix {
+    zoom: 1 ;
+}
+.clearfix:after {
+    content: "." ;
+    display: block ;
+    height: 0 ;
+    clear:both;
+    visibility: hidden ;
+}
+
+
+/* common ------------------------------ */
+
+h1{
+	height: 44px ;
+	background: #103092 url(../img/bgHeader.png) repeat-x ;
+	font-family: HiraKakuProN-W6 ;
+	font-size: 120% ;
+	color: #fff ;
+	font-weight:bold;
+	text-align: center ;
+	line-height: 44px ;
+	text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 0  ;
+	overflow: hidden ;
+	white-space: nowrap ;
+	text-overflow: ellipsis ;
+}
+
+h2{
+}
+
+.title{
+	color: #fff ;
+	background: #103092 ;
+	font-family: HiraKakuProN-W6 ;
+	text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 0  ;
+	overflow: hidden ;
+	padding: 3px 10px ;
+	margin-bottom: 10px ;
+}
+
+.caption{font-size: 93.3% ;}
+.captionRed{font-size: 93.3% ; color: #ff0011 ;}
+
+.section{ margin: 0 10px ;}
+.block{background: #e3e8f6 ; padding: 10px ; margin-bottom: 10px ;}
+
+.submit{text-align: center ; border-top: 1px dotted #103092 ; padding-top: 10px ; margin-bottom: 10px ;}
+.submit2{text-align: center ; border-bottom: 1px dotted #103092 ; padding-bottom: 10px ; margin-bottom: 10px ;}
+.submit3{text-align: center ;}
+.submit p{text-align: center ;}
+
+.sectionLink a {background: url(../img/iconBullet02.png) no-repeat 0 5px ;padding-left: 10px ;}
+
+dl.sectionForm{}
+
+dl.sectionForm dt{
+	background: #e3e8f6 ;
+	font-family: HiraKakuProN-W6 ;
+	text-shadow: rgba(255, 255, 255, 0.4) 0 -1px 0  ;
+	overflow: hidden ;
+	padding: 3px 10px ;
+	margin-bottom: 10px ;
+}
+
+dl.sectionForm dd{
+	padding: 0 10px ;
+	margin-bottom: 10px ;
+}
+
+/* color */
+
+.fontRed {color: #ff0011 ;}
+.fontSky {color: #0090ff ;}
+.fontBlue {color: #103092 ;}
+.fontGray {color: #999 ;}
+
+
+/* layout ------------------------------ */
+
+#wrapper{
+	/* background: #fff ; */
+	padding: 10px 0 ;
+	min-height: 236px ;
+}
+
+#title{
+	background: url(../img/iconBullet.png) no-repeat 0 7px ;
+	font-family: HiraKakuProN-W6 ;
+	font-size: 120% ;
+	color: #103092 ;
+	font-weight:bold;
+	overflow: hidden ;
+	margin: 0 10px 10px ;
+	padding-left: 10px ;
+}
+
+#footer{
+	background: #3450a4 url(../img/bgFooter.png) repeat-x ;
+	font-family: HiraKakuProN-W6 ;
+	color: #fff ;
+	font-weight:bold;
+	text-align: center ;
+	text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 0  ;
+	overflow: hidden ;
+	white-space: nowrap ;
+	text-overflow: ellipsis ;
+	padding: 20px 10px ;
+}
+
+#logo {text-align: center ; margin-bottom: 20px ;}
+
+
+/* verB(no header and footer) ------------------------------ */
+
+body.verB {background: #fff ;}
+body.verB #wrapper{min-height: 280px ;}
+
+
+/* cancel ------------------------------ */
+
+/* can001 */
+
+#cancel.can001 .sectionPoint {color: #103092 ; text-align: center ;background: #e3e8f6 ; padding: 10px ; margin-bottom: 10px ;}
+
+/* can002 */
+
+#cancel.can002 {}
+
+/* can003 */
+
+#cancel.can003 {}
+
+
+/* chg001 */
+#changephone.chg001 .mailto a {background: url(../img/iconBullet02.png) no-repeat 0 5px ;padding-left: 10px ;}
+#changephone.chg001 .sectionCenter p {text-align: center ; margin-bottom: 10px ;}
+
+
+/* directory common ------------------------------ */
+
+/* err001 */
+
+#common.err001 {}
+
+
+/*  directory list ------------------------------ */
+
+
+/* inquiry001 */
+
+#inquiry.list001 table th,
+#inquiry.list001 table td {padding: 0 10px 5px 0 ;}
+#inquiry.list001 table tr:last-child th,
+#inquiry.list001 table tr:last-child td {padding: 0 10px 0 0 ;}
+#inquiry.list001 table th {width: 80px ;}
+#inquiry.list001 table td a {background: url(../img/iconBullet03.png) no-repeat 0 7px ;padding-left: 10px ;}
+
+
+/*  directory memberlogin ------------------------------ */
+
+/* reg001 */
+
+#memberlogin.reg001 {}
+
+/* reg002 */
+
+#memberlogin.reg002 .mailto a {background: url(../img/iconBullet02.png) no-repeat 0 5px ;padding-left: 10px ;}
+#memberlogin.reg002 .sectionCenter p {text-align: center ; margin-bottom: 10px ;}
+
+/* reg003 */
+
+#memberlogin.reg003 {}
+
+/* reg004 */
+
+#memberlogin.reg004 {}
+
+/* reg005 */
+
+#memberlogin.reg005 {}
+
+/* reg006 */
+
+#memberlogin.reg006 {}
+
+/* reg007 */
+
+#memberlogin.reg007 {}
+
+
+/*  directory mypage ------------------------------ */
+
+/* add001 */
+
+#mypage.add001 {}
+
+/* mp002 */
+
+#mypage.add002 {}
+
+/* add003 */
+
+#mypage.add003 {}
+
+/* add004 */
+
+#mypage.mp004 {}
+
+/* maga001 */
+
+#mypage.maga001 ul.block li { background: url(../img/iconBullet03.png) no-repeat 0 7px ;padding-left: 10px ; margin-bottom: 5px ; }
+#mypage.maga001 ul.block li:last-child {margin-bottom: 0 ; }
+#mypage.maga001 .sectionRadio {border-top: 1px dotted #103092 ; padding-top: 10px ;}
+#mypage.maga001 .sectionRadio p {margin: 0 10px 10px ;}
+
+/* maga002 */
+
+#mypage.maga002 {}
+
+/* mail001 */
+
+#mypage.mail001 dl { border-bottom: 1px dotted #103092 ; margin-bottom: 10px ; }
+#mypage.mail001 .sectionCenter p {text-align: center ; margin-bottom: 10px ;}
+
+/* mail002 */
+
+#mypage.mail002 input[type="submit"] { text-align: center ;width: 120px ; }
+#mypage.mail002 input[type="submit"]:first-child { margin-right: 5px ; }
+
+/* mail003 */
+
+#mypage.mail003 {}
+
+/* mod001 */
+
+#mypage.mod001 ul.section li { margin-bottom: 10px ; }
+#mypage.mod001 ul.section li a { background: url(../img/iconBullet02.png) no-repeat 0 5px ;padding-left: 10px ; }
+#mypage.mod001 a#inquiry {background: none}
+#mypage.mod001 ul.section li p {  }
+#mypage.mod001 .sectionCenter p {text-align: center ; margin-bottom: 10px ;}
+
+/* mp001 */
+
+#mypage.mp001 ul.section li { margin-bottom: 10px ; }
+#mypage.mp001 ul.section li a { background: url(../img/iconBullet02.png) no-repeat 0 5px ;padding-left: 10px ; }
+
+/* pas001 */
+
+#mypage.pas001 input[type="password"]{ width: 100px ; }
+
+/* pas002 */
+
+#mypage.pas002 {}
+
+/* pw001 */
+
+#mypage.pw001 .section a {background: url(../img/iconBullet02.png) no-repeat 0 5px ;padding-left: 10px ;}
+#mypage.pw001 .sectionCenter p {text-align: center ; margin-bottom: 10px ;}
+
+/* tel001 */
+
+#mypage.tel001 {}
+
+/* tel002 */
+
+#mypage.tel002 {}
+
+
+/*  directory pointrecord ------------------------------ */
+
+/* point001 */
+
+#pointrecord.point001 dl dd { background: url(../img/iconBullet03.png) no-repeat 0 7px ;padding-left: 10px ; margin: 0 10px 10px ; }
+
+
+/*  directory report ------------------------------ */
+
+/* detail001 */
+
+#report.detail001 .section a {background: url(../img/iconBullet02.png) no-repeat 0 5px ;padding-left: 10px ;}
+
+/* list001 */
+
+#report.list001 .previous a {background: url(../img/iconBullet02B.png) no-repeat 0 5px ;padding-left: 10px ;}
+#report.list001 .next a {background: url(../img/iconBullet02.png) no-repeat 0 5px ;padding-left: 10px ;}
+
+
+
+/*  campaign ------------------------------ */
+
+#campaign.camp0501 .sectionCenter p {text-align: center ; margin-bottom: 10px ;}
+#campaign.entry001 .sectionCenter p {text-align: center ; margin-bottom: 10px ;}
+#campaign.reject001 .sectionCenter p {text-align: center ; margin-bottom: 10px ;}
+#campaign.reject002 .sectionCenter p {text-align: center ; margin-bottom: 10px ;}
+#campaign.reject003 .sectionCenter p {text-align: center ; margin-bottom: 10px ;}
+
+
+/*  dmcoupon ------------------------------ */
+
+#dmcoupon.dmcoup001 .sectionCenter p {text-align: center ; margin-bottom: 10px ;}
+
