@@ -49,10 +49,21 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        $data = session()->all();   
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'name2' => ['required', 'string', 'max:255'],
+            'name_kana' => ['required', 'string', 'max:255'],
+            'name_kana2' => ['required', 'string', 'max:255'],
+            'mail_flg' => ['required', 'string', 'max:255'],
+            // 'birthday' => ['required', 'date', 'max:255'],
+            'gender' => ['required', 'string', 'max:255'],
+            'zip' => ['required', 'string', 'max:255'],
+            'area' => ['required', 'string', 'max:255'],
+            'area2' => ['required', 'string', 'max:255'],
+            'mobile_number' => ['required', 'string', 'max:255'],
         ]);
     }
 
@@ -64,10 +75,33 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $data = session()->all();   
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'name2' => $data['name2'],
+            'name_kana' => $data['name_kana'],
+            'name_kana2' => $data['name_kana2'],
+            'mail_flg' => $data['mail_flg'],
+            'birthday' => $data['birthday'],
+            'gender' => $data['gender'],
+            'zip' => $data['zip'],
+            'area' => $data['area'],
+            'area2' => $data['area2'],
+            'mobile_number' => $data['mobile_number'],            
         ]);
     }
+
+    
+    public function confirm()
+    {
+        $request = request();
+        foreach($request->all() as $key => $val){                       //’Ç‹L
+            $request->session()->put($key, $request->$key);             //’Ç‹L
+        }
+        $request->session()->put('birthday', $request->yy_birth . '-' . $request->mm_birth . '-' . $request->dd_birth); 
+        return view('auth.confirm'); 
+    }
+    
 }

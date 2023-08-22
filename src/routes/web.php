@@ -21,10 +21,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
+Route::redirect('/register/confirm', '/register');    //’Ç‹L
+Route::post('/register/confirm', [App\Http\Controllers\Auth\RegisterController::class,'confirm']);    //’Ç‹L
+Route::post('/register/complete', [App\Http\Controllers\Auth\RegisterController::class,'register']);  //’Ç‹L
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
