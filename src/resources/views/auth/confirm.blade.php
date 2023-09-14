@@ -127,7 +127,13 @@
         </div>
 
         <div class="l-buttons-column l-buttons-fill mt40">
+        <form method="post" action="{{ route('verification.send') }}">
+        @method('post')
+        @csrf
+        <div>
           <input class="button button-primary button-medium-short" type="submit" name="regist" value="この内容で登録する" style="background: linear-gradient(180deg,#f53d3d,#F60000 98.57%);border: 1px solid #F60000;">
+          </div>
+          </form>
           <a class="button button-secondary button-medium-short" href="javascript:history.go(-1);">内容を修正する</a>
         </div>
         <input type="hidden" name="agree.x" value="">
