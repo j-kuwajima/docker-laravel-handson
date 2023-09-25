@@ -13,7 +13,6 @@ use App\Http\Controllers\Auth\EmailVerificationController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -22,20 +21,47 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::redirect('/register/confirm', '/register');    //追記
-Route::post('/register/confirm', [App\Http\Controllers\Auth\RegisterController::class,'confirm']);    //追記
-Route::post('/register/complete', [App\Http\Controllers\Auth\RegisterController::class,'register']);  //追記
- 
-Route::controller(EmailVerificationController::class)
-    ->prefix('email')->name('verification.')->group(function () {
-        // ?????????
-        Route::get('verify', 'index')->name('notice');
-        // ???????
-        Route::post('verification-notification', 'notification')
-            ->middleware('throttle:6,1')->name('send');
-        // ???????????
-        Route::get('verification/{id}/{hash}', 'verification')
-            ->middleware(['signed', 'throttle:6,1'])->name('verify');
-    });
+Route::redirect('/register/confirm', '/register');
+Route::post('/register/confirm', [App\Http\Controllers\Auth\RegisterController::class,'confirm']);
+Route::post('/register/complete', [App\Http\Controllers\Auth\RegisterController::class,'register']);
 
-    Route::middleware(['web', 'verified', 'auth']);
+Route::prefix('email')->name('verification.')->group(function () {
+    // ?????????
+    Route::get('verify', [EmailVerificationController::class, 'index'])->name('notice');
+    // ???????
+    Route::post('verification-notification', [EmailVerificationController::class, 'notification'])
+        ->middleware('throttle:6,1')->name('send');
+    // ???????????
+    Route::get('verification/{id}/{hash}', [EmailVerificationController::class, 'verification'])
+        ->middleware(['signed', 'throttle:6,1'])->name('verify');
+});
+
+Route::middleware(['web', 'verified', 'auth'])->group(function () {
+    // ???????????????????????????????
+});
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Route::redirect('/register/confirm', '/register');    //追記
+// Route::post('/register/confirm', [App\Http\Controllers\Auth\RegisterController::class,'confirm']);    //追記
+// Route::post('/register/complete', [App\Http\Controllers\Auth\RegisterController::class,'register']);  //追記
+ 
+// Route::controller(EmailVerificationController::class)
+//     ->prefix('email')->name('verification.')->group(function () {
+//         // ?????????
+//         Route::get('verify', 'index')->name('notice');
+//         // ???????
+//         Route::post('verification-notification', 'notification')
+//             ->middleware('throttle:6,1')->name('send');
+//         // ???????????
+//         Route::get('verification/{id}/{hash}', 'verification')
+//             ->middleware(['signed', 'throttle:6,1'])->name('verify');
+//     });
+
+//     Route::middleware(['web', 'verified', 'auth']);

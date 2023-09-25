@@ -55,7 +55,8 @@
 <div class="l-base-e l-grid">
   <div class="l-grid-col1">
     <div class="l-content">
-    <form method="POST" action="{{ url('register/complete') }}">
+    <!-- <form method="POST" action="{{ url('register/complete') }}"> -->
+    <form method="POST" action="{{ route('verification.send') }}">
         @csrf
         <h1 class="signin-section__title">登録内容確認</h1>
         <hr class="line line-low mt24">
@@ -133,7 +134,7 @@
         <div>
           <input class="button button-primary button-medium-short" type="submit" name="regist" value="この内容で登録する" style="background: linear-gradient(180deg,#f53d3d,#F60000 98.57%);border: 1px solid #F60000;">
           </div>
-          </form>
+        </form>
           <a class="button button-secondary button-medium-short" href="javascript:history.go(-1);">内容を修正する</a>
         </div>
         <input type="hidden" name="agree.x" value="">
